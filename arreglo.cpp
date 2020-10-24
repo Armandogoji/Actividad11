@@ -1,5 +1,3 @@
-#include <iostream>
-using namespace std;
 #include "arreglo.h"
 
 arreglo_dinamico::arreglo_dinamico(){
@@ -25,7 +23,7 @@ void arreglo_dinamico::insertar_inicio(const string &s){
     if (cont == tam){
         expandir();         
     }
-    for (size_t i = cont; i = 0; i--){
+    for (size_t i = cont; i > 0; i--){
         arreglo[i] = arreglo[i-1];
     }
     arreglo[0] = s;
@@ -41,4 +39,8 @@ void arreglo_dinamico::expandir(){
     delete[] arreglo;
     arreglo = nuevo;
     tam = tam + MAX;
+}
+
+size_t arreglo_dinamico::size(){
+    return cont;
 }

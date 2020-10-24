@@ -8,6 +8,11 @@ int main(){
     arreglo.insertar_final("l");
     arreglo.insertar_final("a");
     arreglo.insertar_inicio("h");
+
+    for (size_t i = 0; i < arreglo.size(); i++)
+    {
+        cout << arreglo[i] << " ";
+    }
     
     return 0;
 }
